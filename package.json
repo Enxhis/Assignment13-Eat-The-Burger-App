@@ -1,0 +1,32 @@
+{
+  "name": "assignment13-eat-the-burger-app",
+  "version": "1.0.0",
+  "description": "Burger App ",
+  "main": "server.js",
+  "scripts": {
+    "test": "No test files",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Enxhis/Assignment13-Eat-The-Burger-App.git"
+  },
+  "keywords": [
+    "MYSQL",
+    "Node",
+    "Express",
+    "HandleBars",
+    "ORM"
+  ],
+  "author": "Enxhi Salaj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Enxhis/Assignment13-Eat-The-Burger-App/issues"
+  },
+  "homepage": "https://github.com/Enxhis/Assignment13-Eat-The-Burger-App#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "mysql": "^2.18.1"
+  }
+}
