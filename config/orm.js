@@ -1,5 +1,6 @@
 // Import MYSQL connection
 const { table } = require("console");
+const { createVerify } = require("crypto");
 const { connect } = require("../config/connection.js");
 var connection = require("../config/connection.js");
 
@@ -43,6 +44,7 @@ var ORM = {
             cb(result);
         });
     },
+    // function that inserts new data in burgers table
     insertOne: function(table, cols, vals, cb){
         var queryString = "INSERT INTO " + table;
 
@@ -55,6 +57,24 @@ var ORM = {
         console.log(queryString);
 
         connection.query(queryString, vals, function(err, result){
+            if(err){
+                throw err;
+            }
+            cb(result);
+        });
+    },
+    // function that updates an existing entry in the burgers table
+    updateOne: function(table, objColVals, condition, cb){
+        var queryString = "UPDATE " + table;
+
+        queryString += " SET";
+        queryString += objToSql(objColVals);
+        queryString += " WHERE ";
+        queryString += condition;
+
+        console.log(queryString);
+
+        connection.query(queryString, function(err, result){
             if(err){
                 throw err;
             }
