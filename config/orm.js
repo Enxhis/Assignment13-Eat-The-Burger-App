@@ -34,9 +34,9 @@ var ORM = {
         var queryString = "SELECT * FROM " + tableInput + ";";
 
         connection.query(queryString, function (err, result) {
-            if (err) {
-                throw err;
-            }
+            // if (err) {
+            //     throw err;
+            // }
             // Return response callback
             cb(result);
         });
