@@ -18,7 +18,11 @@ router.get("/", function (req, res) {
 
 // POST route
 router.post("/burgers", function (req, res) {
-    burger.insertOne(["burger_name"], [req.body.burger_name], function(result){
+    burger.insertOne([
+        "burger_name"
+    ], [
+        req.body.burger_name
+    ], function(data){
         res.redirect("/");
     });
 });
@@ -30,8 +34,8 @@ router.put("/burgers/:id", function(req, res){
     burger.updateOne({
         devoured: true
     }, condition,
-    function(result){
-        if(result.changedRows === 0){
+    function(data){
+        if(data.changedRows === 0){
             return res.status(404).end();
         }
         res.redirect("/");

@@ -1,7 +1,7 @@
 // Import MYSQL connection
-const { table } = require("console");
-const { createVerify } = require("crypto");
-const { connect } = require("../config/connection.js");
+//const { table } = require("console");
+//const { createVerify } = require("crypto");
+//const { connect } = require("../config/connection.js");
 var connection = require("../config/connection.js");
 
 // Hjelper function for SQL syntax
@@ -36,6 +36,7 @@ var ORM = {
     // function that returns all data from burgers table
     selectAll: function (tableInput, cb){
         var queryString = "SELECT * FROM " + tableInput + ";";
+        
         connection.query(queryString, function(err, result){
             if(err){
                 throw err;
@@ -51,6 +52,7 @@ var ORM = {
         queryString += " (";
         queryString += cols.toString();
         queryString += ") ";
+        queryString += "VALUES (";
         queryString += printQuestionMarks(vals.length);
         queryString += ") ";
 
@@ -67,7 +69,7 @@ var ORM = {
     updateOne: function(table, objColVals, condition, cb){
         var queryString = "UPDATE " + table;
 
-        queryString += " SET";
+        queryString += " SET ";
         queryString += objToSql(objColVals);
         queryString += " WHERE ";
         queryString += condition;

@@ -2,14 +2,14 @@
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
         <h1 class="display-4">EAT DA BURGER!</h1>
-        <img src="../public/assets/burger-img.png"  class="img-fluid" alt="burger image"/>
+        {{!-- <img src="/assets/burger-img.png" class="img-fluid" alt="burger image" /> --}}
         <p class="lead">Enter the name of the burger you would like to devour!</p>
         <hr class="my-4">
         {{!-- Form to get the name of the burger --}}
         <form class="form-inline" action="/burgers" method="POST">
             <div class="form-group mx-sm-3 mb-2">
                 <label for="burger" class="sr-only">Burger's Name</label>
-                <input type="text" class="form-control" id="burger-name" placeholder="Burger Name" required />
+                <input type="text" class="form-control" id="burger-name" name="burger_name" placeholder="Burger Name" required />
             </div>
             <button type="submit" class="btn btn-primary mb-2">Submit</button>
         </form>
@@ -21,15 +21,15 @@
 <div class="container">
     <div class="row">
         {{!-- Not devoured burgers --}}
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 24rem;">
             <div class="card-header">
                 Not devoured burgers
             </div>
             <ul class="list-group list-group-flush">
                 {{#each burgers}}
                 {{#unless this.devoured}}
-                <li class="list-group-item">{{this.burger_name}}
-                    <form id="to-devour" action="/burgers/{{this.id}}?_method=PUT" method="POST">
+                <li class="list-group-item">{{this.id}}. {{this.burger_name}}
+                    <form id="to-devour" action="/burgers/{{this.id}}" method="POST">
                         <button type="submit" class="btn btn-succes">DEVOUR!</button>
                     </form>
                     <hr>
@@ -38,23 +38,22 @@
                 {{/each}}
             </ul>
         </div>
-    </div>
-    {{!-- END of NOT-DEVOURED burgers --}}
+        {{!-- END of NOT-DEVOURED burgers --}}
 
 
-
-    <div class="card" style="width: 18rem;">
-        <div class="card-header">
-            Devoured burgers
+        <div class="card" style="width: 24rem;">
+            <div class="card-header">
+                Devoured burgers
+            </div>
+            <ul class="list-group list-group-flush">
+                {{#each burgers}}
+                {{#if this.devoured}}
+                <li class="list-group-item" id="devoured">
+                    {{this.id}}. {{this.burger_name}}
+                    <hr>
+                </li>
+                {{/if}}
+                {{/each}}
+            </ul>
         </div>
-        <ul class="list-group list-group-flush">
-            {{#each burgers}}
-            {{#if this.devoured}}
-            <li class="list-group-item" id="devoured">
-                {{this.id}}. {{this.burger_name}}
-                <hr>
-            </li>
-            {{/if}}
-            {{/each}}
-        </ul>
     </div>
