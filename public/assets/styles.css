@@ -1,4 +1,17 @@
 /* Styles for the burger app */
+
+/* Style the jumbotron */
+img{
+    width: 150px;
+    height: 150px;
+    margin: 1rem;
+}
+
+#site-title{
+    color: rgb(49, 68, 235);
+}
+
+/* Style cards */
 .card{
     margin: 1rem;
 }

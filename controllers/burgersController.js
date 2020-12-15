@@ -22,24 +22,24 @@ router.post("/burgers", function (req, res) {
         "burger_name"
     ], [
         req.body.burger_name
-    ], function(data){
+    ], function (data) {
         res.redirect("/");
     });
 });
 
 // PUT route
-router.put("/burgers/:id", function(req, res){
+router.put("/burgers/:id", function (req, res) {
     var condition = "id = " + req.params.id;
 
     burger.updateOne({
         devoured: true
     }, condition,
-    function(data){
-        if(data.changedRows === 0){
-            return res.status(404).end();
-        }
-        res.redirect("/");
-    });
+        function (data) {
+            if (data.changedRows === 0) {
+                return res.status(404).end();
+            }
+            res.redirect("/");
+        });
 });
 
 // Export routes for server.js to use
