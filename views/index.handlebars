@@ -4,10 +4,11 @@
         <div class="row">
             <h1 class="display-4" id="site-title">EAT DA BURGER!</h1>
             <img src="/assets/burger-img.png" class="img-fluid" alt="burger image" />
+
         </div>
-        <p class="lead">Enter the name of the burger you would like to devour!</p>
         <hr class="my-4">
         {{!-- Form to get the name of the burger --}}
+        <p class="lead">Enter the name of the burger you would like to devour!</p>
         <form class="form-inline" action="/burgers" method="POST">
             <div class="form-group mx-sm-3 mb-2">
                 <label for="burger" class="sr-only">Burger's Name</label>
@@ -19,7 +20,7 @@
     </div>
 </div>
 {{!-- End of Jumbotron --}}
-<hr class="my-4">
+
 {{!-- List the burgers --}}
 <div class="container">
     <div class="row">
@@ -33,7 +34,7 @@
                 {{#unless this.devoured}}
                 <li class="list-group-item">{{this.id}}. {{this.burger_name}}
                     <form id="to-devour" action="/burgers/{{this.id}}?_method=PUT" method="POST">
-                        <button type="submit" class="btn btn-succes">DEVOUR!</button>
+                        <button type="submit" class="btn btn-succes" id="devour-btn">DEVOUR!</button>
                     </form>
                 </li>
                 {{/unless}}

@@ -1,17 +1,59 @@
 /* Styles for the burger app */
+body{
+    background-color: #F2BA52;
+}
 
+.btn{
+    background-color: #F25244;
+    font-family: 'Langar', cursive;
+}
 /* Style the jumbotron */
+.jumbotron{
+    background-color:#F2DBAE;
+    font-family: 'Langar', cursive;
+    text-align: left;
+}
+#site-title{
+    font-size: 72px;
+    margin-top: 5rem;
+}
 img{
-    width: 150px;
-    height: 150px;
+    float: right;
+    width: 200px;
+    height: 200px;
     margin: 1rem;
 }
 
 #site-title{
-    color: rgb(49, 68, 235);
+    color: #F25244;
+}
+
+.lead{
+    color: #575922;    
 }
 
 /* Style cards */
 .card{
     margin: 1rem;
+    background-color: #F2DBAE;
+}
+.card-header{
+    background-color: #F25244;
+    color: #F2E6D0;
+    font-family: 'Langar', cursive;
+    font-size: 20px;
+}
+
+.list-group-item{
+    background-color: #F2DBAE;
+    text-align: left;
+}
+
+#to-devour{
+    display: inline;
+    margin: 1rem;
+}
+
+#devour-btn{
+    float: right;
 }
