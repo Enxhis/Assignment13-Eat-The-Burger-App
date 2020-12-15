@@ -85,4 +85,4 @@ var ORM = {
 };
 
 // Export the ORM object for the model
-module.exports = orm;
+module.exports = ORM;

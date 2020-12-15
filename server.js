@@ -12,7 +12,7 @@ app.use(express.static("public"));
 
 // Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));
-app/use(express.json());
+app.use(express.json());
 
 // set Handlebars
 var exphbs = require("express-handlebars");
@@ -22,7 +22,7 @@ app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them
 // TODOO...
-var routes = require("./controllers");
+var routes = require("./controllers/burgersController.js");
 
 app.use(routes);
 
