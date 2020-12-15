@@ -28,6 +28,6 @@ app.use("/", routes);
 
 //app.use(routes);
 
-app.listen(PORT, function(){
+app.listen(PORT, function () {
     console.log("Apllication listening at localhost:" + PORT);
 });
