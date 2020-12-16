@@ -19,13 +19,13 @@
 ## Installation
 
 ## Image
-
+![Eat-Da-Burger](/public/Screenshot/app-screenshot.png)
 ## Links
 
 ## Contribution
 
 ## Licence
-
+![License badge](https://img.shields.io/badge/license-MIT-green)
 ## Questions
   * If you have questions, email me at: enxhi_salaj@yahoo.com,
   * GitHub Profile link: https://github.com/Enxhis
