@@ -21,21 +21,21 @@
 
 ## Technology
 This application was built with:
-    *   JavaScript
-    *   Node.js
-    *   npm packages
-    *   Express
-    *   Handlebars
-    *   ORM
-    *   HTML
-    *   Bootstrap
-    *   ColorHunt
-    *   MVC Pattern
-    *   MySQL
-    *   Heroku
+  * JavaScript
+  * Node.js
+  * npm packages
+  * Express
+  * Handlebars
+  * ORM
+  * HTML
+  * Bootstrap
+  * ColorHunt
+  * MVC Pattern
+  * MySQL
+  * Heroku
 
 ## Installation
-* Make sure you have node installed in your machine and have cloned this repo.
+ * Make sure you have node installed in your machine and have cloned this repo.
  * Run : ```npm install``` in order to install all dependencies 
  * Run : ```node server.js``` and the application will start 
  * Navigate to the localhost port: http://localhost:3030 in the browser.
