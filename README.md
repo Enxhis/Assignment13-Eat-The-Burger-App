@@ -1,4 +1,4 @@
-# Assignment13-Eat-The-Burger-App
+# Eat-The-Burger-App
 
 ## Description
    * Eat-Da-Burger is a restaurant application that users can add a burger name they like. 
